@@ -1,0 +1,25 @@
+{
+  "name": "virtual-keyboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "prettier": "^2.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlinaSidorova28/virtual-keyboard.git"
+  },
+  "author": "AlinaSidorova28",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlinaSidorova28/virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/AlinaSidorova28/virtual-keyboard#readme"
+}
