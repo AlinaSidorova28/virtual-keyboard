@@ -203,7 +203,7 @@ function inputKey() {
         if (event.target.textContent === "Shift" || event.target.textContent === "CapsLock") {
             shiftOrCapsDown({ code: event.target.id, key: event.target.textContent });
         }
-        if (event.target.textContent.length === 1) {
+        if (event.target.textContent.length === 1 && event.target.id !== "ArrowRight" && event.target.id !== "ArrowLeft" && event.target.id !== "ArrowUp" && event.target.id !== "ArrowDown") {
             const key = document.querySelector(`.key[id="${event.target.id}"]`).textContent;
             input.setRangeText(key, input.selectionStart, input.selectionEnd, 'end');
         } else if (event.target.textContent === "Tab") {
@@ -216,6 +216,14 @@ function inputKey() {
             input.setRangeText('', input.selectionStart, input.selectionEnd + 1);
         } else if (event.target.textContent === "Win") {
             languageChange();
+        } else if (event.target.id === "ArrowRight") {
+            arrowRightHandler();
+        } else if (event.target.id === "ArrowLeft") {
+            arrowLefttHandler();
+        } else if (event.target.id === "ArrowUp") {
+            arrowUpHandler();
+        } else if (event.target.id === "ArrowDown") {
+            arrowDownHandler();
         }
     }));
 
@@ -297,6 +305,31 @@ function onBackspaceClick() {
     } else {
         input.setRangeText('', input.selectionStart, input.selectionEnd, 'end');
     }
+}
+
+// handlers for arrows on virual keyboard
+function arrowRightHandler() {
+    const pos = input.selectionEnd;
+    input.selectionStart = pos + 1;
+    input.selectionEnd = pos + 1;
+}
+
+function arrowLefttHandler() {
+    const pos = input.selectionStart;
+    if (pos) {
+        input.selectionStart = pos - 1;
+        input.selectionEnd = pos - 1;
+    }
+}
+
+function arrowUpHandler() {
+    input.selectionStart = 0;
+    input.selectionEnd = 0;
+}
+
+function arrowDownHandler() {
+    input.selectionStart = input.value.length;
+    input.selectionEnd = input.value.length;
 }
 
 createKeyBoard(language);
