@@ -4,7 +4,7 @@ document.body.append(wrapper);
 
 const info = document.createElement('p');
 info.className = 'info';
-info.innerHTML = "Смена языка ввода: 'Ctrl' + 'Alt', клавиша 'Win' на виртуальной клавиатуре <br>Клавиши 'CapsLock'";
+info.innerHTML = "Смена языка ввода: 'Ctrl' + 'Alt', клавиша 'Win' на виртуальной клавиатуре <br>Сделано в ОС Windows";
 wrapper.append(info);
 
 const createInput = document.createElement('textarea');
