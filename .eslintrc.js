@@ -26,5 +26,6 @@ module.exports = {
         "indent": "off",
         "no-param-reassign": "off",
         "no-prototype-builtins": "off",
+        "class-methods-use-this": "off",
     }
 };

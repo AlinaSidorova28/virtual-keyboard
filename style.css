@@ -67,8 +67,13 @@
 .active,
 .key:hover {
     background-color: #1e7cc6;
-    box-shadow: 0 0 5px 0px #000000;
     cursor: pointer;
+}
+
+.pressed {
+    transition: opacity 0.8s ease-in-out;
+    transform: scale(0.9);
+    box-shadow: 0 0 6px 0px #000000;
 }
 
 .info {
